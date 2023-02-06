@@ -112,7 +112,7 @@ namespace PowerSpace
                     "\t-r, --reverse  [host:port]  connect back to server at [host:port]\n" +
                     "\t-k, --key      [hex]        enable RC4 encryption by specifying a key\n\n" +
 
-                    "\tNote: if no [cmd] is given, the shell becomes interactive\n"
+                    "\tNote: if no [commands] are given, the shell becomes interactive\n"
         );
 
         private static string Strip(string s)
