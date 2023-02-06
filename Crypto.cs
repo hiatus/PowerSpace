@@ -75,26 +75,4 @@ namespace PowerSpace
             Encrypt(data);
         }
     }
-
-    internal class Secret
-    {
-        private byte[] _Key = {
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-        };
-
-        internal byte[] GetBytes(string base64)
-        {
-            byte[] data = Convert.FromBase64String(base64);
-
-            for (int i = 0; i < base64.Length; ++i)
-                data[i] ^= _Key[i % _Key.Length];
-
-            return data;
-        }
-
-        internal string GetString(string base64)
-        {
-            return Encoding.Default.GetString(GetBytes(base64));
-        }
-    }
 }
