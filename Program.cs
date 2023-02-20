@@ -99,7 +99,7 @@ namespace PowerSpace
         }
     }
 
-    internal class Program
+    public class Program
     {
         private const string _Banner = (
             "PowerSpace [options]?\n" +
@@ -130,7 +130,7 @@ namespace PowerSpace
             return e.ToString();
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Options options;
             Shell shell;
